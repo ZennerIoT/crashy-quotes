@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  crashy:
+    build: .
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:4000:4000/tcp
+    environment: 
+      SECRET_KEY_BASE: mysupersecuresecretkeybase
